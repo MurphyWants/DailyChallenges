@@ -1,8 +1,15 @@
 #include <iostream>
 
+using std::cin;
+
 int main(int argc, char* argv[]){
-  int input = atoi(argv[1]);
-  printf("input: %d\n", input);
+  int input;
+  if(argc == 1){
+    printf("Please input a number: \n");
+    cin >> input;
+  } else {
+    input = atoi(argv[1]);
+  }
   while(input > 1){
     switch(input%3){
       case 0:
